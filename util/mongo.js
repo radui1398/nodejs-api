@@ -37,19 +37,8 @@ const getAll = (name,type) => {
     }
 }
 
-const notFoundPage = () => {
-    if(app){
-        app.get("*",(req,res) => {
-            res.json({code: 404, result: "Aceasta ruta nu face parte din API."});
-        })
-    }
-    else{
-        return console.log('Eroare de initializare.')
-    }
-}
 
 module.exports = {
     getAll,
     init,
-    notFoundPage,
 }

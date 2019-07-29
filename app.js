@@ -21,4 +21,11 @@ mongo.getAll('students',0);
 mongo.getAll('profs',1);
 
 //404
-mongo.notFoundPage();
+if(app){
+    app.get("*",(req,res) => {
+        res.json({code: 404, result: "Aceasta ruta nu face parte din API."});
+    })
+}
+else{
+    return console.log('Eroare de initializare.')
+}
