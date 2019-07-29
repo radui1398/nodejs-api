@@ -7,9 +7,6 @@ let app = null;
 
 const init = (_app) => {
     app = _app;
-    app.listen(3000, () => {
-        console.log("Server running on port 3000");
-    });
 }
 
 const getAll = (name,type) => {

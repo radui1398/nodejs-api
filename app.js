@@ -3,7 +3,13 @@ const express = require("express");
 const mongo = require('./util/mongo.js');
 const front = require('./util/front.js');
 
+
+//app init
 const app = express();
+app.listen(3000, () => {
+    console.log("Server running on port 3000");
+});
+
 
 //front end
 front.init(app,express.static('public'));
