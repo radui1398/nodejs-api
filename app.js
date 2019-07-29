@@ -27,5 +27,5 @@ if(app){
     })
 }
 else{
-    return console.log('Eroare de initializare.')
+    console.log('Eroare de initializare.')
 }
